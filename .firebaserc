@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "production": "porto-socorro-app-dev",
+    "staging": "portosocorro-stg"
+  },
+  "targets": {
+    "porto-socorro-app-dev": {
+      "hosting": {
+        "portal": [
+          "porto-socorro-portal"
+        ]
+      }
+    },
+    "portosocorro-stg": {
+      "hosting": {
+        "portal": [
+          "portosocorro-stg-portal"
+        ]
+      }
+    }
+  }
+}

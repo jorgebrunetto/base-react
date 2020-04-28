@@ -1,0 +1,60 @@
+{
+  "root": true,
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "airbnb-base",
+        "prettier"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react", 
+        "babel"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "moduleDirectory": ["node_modules", "src/"]
+        }
+      }
+    },
+    "rules": {
+      "react/jsx-filename-extension": [
+        1, 
+        { "extensions": [".js", ".jsx"] }
+      ],
+      "no-useless-catch": 0,
+      "import/prefer-default-export": 0,
+      "import/imports-first": 0,
+      "prettier/prettier": "error",
+      "linebreak-style": 0,
+      "comma-dangle": 0,
+      "arrow-parens": 0,
+      "no-unused-vars": 0,
+      "no-throw-literal": 0,
+      "camelcase": 0,
+      "eqeqeq": 0,
+      "no-plusplus": 0,
+      "array-callback-return": 0,
+      "no-case-declarations": 0,
+      "new-cap": 0,
+      "no-duplicate-imports": 0,
+      "import/no-duplicates": 0,
+      "react/jsx-one-expression-per-line": 0
+    }
+}

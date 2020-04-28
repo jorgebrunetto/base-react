@@ -1,0 +1,21 @@
+image: node:10.16.0
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy production
+          caches:
+              - node
+          script:
+              - yarn global add firebase-tools@latest
+              - yarn
+              - yarn deploy --token=$FIREBASE_TOKEN -P production --non-interactive
+    staging:
+      - step:
+          name: Deploy staging
+          caches:
+              - node
+          script:
+              - yarn global add firebase-tools@latest
+              - yarn
+              - yarn deploy --token=$FIREBASE_TOKEN -P staging --non-interactive
